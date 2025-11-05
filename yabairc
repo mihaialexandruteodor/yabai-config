@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# reload scripting addition on Dock restart
+yabai -m signal --add event=dock_did_restart action="yabai --load-sa"
+yabai --load-sa
+
+# enable tiling
+yabai -m config layout bsp
+yabai -m config auto_balance on
+yabai -m config window_gap 10
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+
+# manage all normal windows
+yabai -m rule --add app="^System Preferences$" manage=off
