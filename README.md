@@ -24,7 +24,8 @@ To check if SIP is turned off run ```csrutil status```
 
 Notes:
 
-- install via brew with ```brew install koekeishiya/formulae/yabai```
+- install via brew with ```brew install koekeishiya/formulae/yabai --HEAD```
+```codesign -fs 'yabai-cert' $(brew --prefix yabai)/bin/yabai```
 - create config in ```~/.config/yabai/yabairc```
 - start with ```yabai --start-service``` , use restart-service or stop-service accordingly
 
